@@ -1,0 +1,16 @@
+{
+  "title": "Diario",
+  "localizedName": "Italiano",
+
+  "calendar": "Calendario",
+
+  "settings": "Impostazioni",
+  "settingsLanguage": "Lingua",
+  "settingsTheme": "Tema",
+  "settingsThemeSystem": "Tema di sistema",
+  "settingsThemeDark": "Modalità dark",
+
+  "locale": "Lingua",
+  "localeAuto": "Automatica",
+  "localeAutoDescription": "Usa lingua di sistema"
+}

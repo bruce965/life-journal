@@ -1,0 +1,16 @@
+{
+  "title": "Life Journal",
+  "localizedName": "English",
+
+  "calendar": "Calendar",
+
+  "settings": "Settings",
+  "settingsLanguage": "Language",
+  "settingsTheme": "Theme",
+  "settingsThemeSystem": "System Theme",
+  "settingsThemeDark": "Dark Mode",
+
+  "locale": "Language",
+  "localeAuto": "Automatic",
+  "localeAutoDescription": "Use system locale"
+}
