@@ -1,19 +1,37 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:life_journal/settings/app_settings.dart';
 import 'package:life_journal/utility/inherited_data.dart';
+import 'package:sqflite/sqflite.dart';
 
+import 'data/app_db_context.dart';
 import 'pages/home_page.dart';
 
 void main() {
+  // required by sqflite
+  WidgetsFlutterBinding.ensureInitialized();
+
+  assert(() {
+    // enable sqflite logs in debug mode
+    Sqflite.setDebugModeOn();
+    return true;
+  }());
+
+  const initialSettings = AppSettings(
+    useSystemTheme: true,
+    darkMode: false,
+    locale: null,
+  );
+
+  final dbContext = AppDbContext('app_data.db');
+
   runApp(InheritedData.provider(
     data: [
-      InheritedData<AppSettings>.dynamic(const AppSettings(
-        useSystemTheme: true,
-        darkMode: false,
-        locale: null,
-      )),
+      InheritedData<AppDbContext>(dbContext),
+      InheritedData<AppSettings>.dynamic(initialSettings),
     ],
     child: const App(),
   ));

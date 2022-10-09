@@ -20,11 +20,6 @@ class CalendarPage extends StatelessWidget {
       ),
       body: Center(
         child: MonthCalendar(date: DateTime.now()),
-        //child: Column(
-        //  mainAxisAlignment: MainAxisAlignment.center,
-        //  children: const [
-        //  ],
-        //),
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
